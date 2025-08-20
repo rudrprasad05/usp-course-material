@@ -1,0 +1,163 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeFile="Site.Master.vb" Inherits="Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>NoMoreFever</title>
+    <link href="~/Styles/Site.css?t=<%= DateTime.Now.Ticks %>" rel="stylesheet" type="text/css"  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+   
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+           <nav class="">
+              <div class="title-cont">
+                <img src="images/heartlogo.png" alt="" width="40" height="40" />
+                <a href="Home.aspx">NoMoreFever</a>
+                <svg
+                  id="ham"
+                  class="ham hamRotate ham1"
+                  viewBox="0 0 100 100"
+                  width="80"
+                  onclick="toggle()"
+                >
+                  <path
+                    class="line top"
+                    d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"
+                  ></path>
+                  <path class="line middle" d="m 30,50 h 40"></path>
+                  <path
+                    class="line bottom"
+                    d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"
+                  ></path>
+                </svg>
+              </div>
+              <ul id="nav" class="">
+                <li class="">
+                  <a href="Home.aspx">Home</a>
+                </li>
+                <li class="">
+                  <a href="About.aspx">About</a>
+                </li>
+                <li class="">
+                  <a href="Booking.aspx">Booking</a>
+                </li>
+                <li class="">
+                  <a href="Contact.aspx">Contact</a>
+                </li>
+                <li id="admin-link" class="hidden">
+                  <a href="Admin.aspx">Admin</a>
+                </li>
+                <li>
+                    <a id="loginButton" class="white-button call-to-action-btn" href="Login.aspx">Log In</a>
+                    <button class="white-button hidden call-to-action-btn" id="logoutButton" type="button" onclick="logout()">Logout</button>
+                </li>
+              </ul>
+            </nav>
+            <section class="breadcumbs">
+                <a id="backHome" class="" href="Home.aspx">&#8676 &nbsp Back Home</a>
+                <p id="breadText"></p>
+            </section>
+        </div>
+
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        
+    </div>
+    <footer class="footer">
+         <section>
+        <h3>Quick Links</h3>
+        <a href="Home.aspx">Home</a>
+        <a href="About.aspx">About</a>
+        <a href="#">Staff</a>
+      </section>
+      <section>
+        <h3>Contact</h3>
+        <a href="#">Mobile</a>
+        <a href="#">Email</a>
+        <a href="#">Fax</a>
+      </section>
+      <section>
+        <h3>Appointment</h3>
+        <a href="Booking.aspx">Portal</a>
+        <a href="Login.aspx">Login</a>
+      </section>
+      <section class="copyright-text">
+        <h3 id="copyright"></h3>
+      </section>
+    </footer>
+    </form>
+</body>
+ <script type="application/javascript">
+      let Ham = document.getElementById("ham");
+      let Nav = document.getElementById("nav");
+      let loginButton = document.getElementById("loginButton")
+      let logoutButton = document.getElementById("logoutButton")
+      let globalIsLoggedIn = false;
+      let adminBtn = document.getElementById("admin-link")
+      let bread = document.getElementById("breadText")
+      let backHomeBtn = document.getElementById("backHome")
+
+      function toggle() {
+        Ham.classList.toggle("active");
+        Nav.classList.toggle("open");
+      }
+
+    function checkLoginCookies(){
+        let creds = localStorage.getItem('credentials')
+        let admin = localStorage.getItem('admin')
+        console.log(creds)
+        if(creds == true || creds == 'true'){
+            globalIsLoggedIn = true
+            console.log("log")
+            loginButton.classList.toggle("hidden")
+            logoutButton.classList.toggle("hidden")
+        }
+        else if(creds !== true || creds !== 'true'){
+             globalIsLoggedIn = false
+            console.log("log out")
+            loginButton.classList.toggle("show")
+        }
+        if(admin == true || admin == 'true'){
+            adminBtn.classList.remove("hidden")
+        }
+        else if(admin !== true || admin !== 'true'){
+            adminBtn.classList.add("hidden")
+        }
+     }
+     function logout(){
+        localStorage.setItem('credentials', false)
+        localStorage.setItem('admin', false)
+        checkLoginCookies()
+        document.location.href = "Home.aspx"
+        logoutButton.classList.toggle("hidden")
+     }
+     function breadCrumb(){
+        let location = window.location.href
+        let currentDir = location.split("/")[location.split("/").length - 1]
+        let currentPage = currentDir.split(".")[0]
+        if(currentPage == "Home"){
+            bread.innerHTML = `<p>You are in: <a href="Home.aspx">${currentPage}</a></p>`
+            backHomeBtn.classList.add("hidden")
+        }
+        else{
+            bread.innerHTML = `<p>You are in: <a href="Home.aspx">Home</a> > <a href=${currentPage}.aspx>${currentPage}</a></p>`
+        }
+        
+     }
+     function onPageLoad() {
+        checkLoginCookies()
+        breadCrumb()
+         let year = new Date().getFullYear()
+         document.getElementById('copyright').textContent = `\u00a9 ${year}, The Engineers, NoMoreFever Fiji`;
+     }
+     onPageLoad();
+        
+    </script>
+</html>

@@ -1,0 +1,801 @@
+﻿body   
+{
+    background: #fff;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.breadcumbs
+{
+    text-align: left;
+     width: 90vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+#breadText
+{
+   
+}
+
+
+
+.main
+{
+    width: 100%;
+    margin: 20px auto;
+    min-height: 420px;
+}
+#copyright
+{
+    font-size: 12px;
+}
+
+.footer
+{
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+.title
+{
+    display: flex;
+    align-items: center;
+}
+
+.navbar
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul
+{
+    list-style: none;
+    text-decoration: none;
+}
+
+.navbar li
+{
+    margin: 0px 15px;
+}
+
+#nav li a:hover
+{
+    color: #b0c4de ;
+    transition: 150ms
+}
+
+.navbar-login
+{
+    margin-left: auto;
+    margin-right: 0;
+    color: Green;
+    float: right;
+}
+
+.questionForm
+{
+    width: 50%;
+    margin: 20px auto;
+}
+
+.login-form
+{
+    width: 60%;
+    border-radius: 12px; 
+    border: solid #444 1px;
+    margin: 0 auto;
+    padding: 15px
+}
+.login-form-inputfield
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+}
+
+.login-form-inputfield input
+{
+    border-radius: 6px;
+     border: solid #444 1px;
+     padding: 8px 12px;
+}
+
+.login-form input[type=submit]
+{
+    width: 100%;
+    background: #fff;
+    color: #000;
+    border-radius: 6px;
+     border: solid #444 1px;
+     padding: 8px 12px;
+     margin: 24px 0 0 0;
+     transition: 250ms;
+     cursor: pointer;
+}
+
+.login-form input[type=submit]:hover
+{
+    background: #343434;
+    color: #fff;
+}
+
+.email-form-inputfield
+{
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.email-form-inputfield input, .email-form-inputfield textarea
+{
+    flex-grow: 1;   
+    border-radius: 6px;
+     border: solid #444 1px;
+     padding: 8px 12px;
+ }
+      .hero {
+        width: 100vw;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        /* background-image: url("images/hero.jpg"); */
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .call-to-action-cont {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .call-to-action-btn {
+        all: unset;
+        border-radius: 8px;
+        border: 1px #a5a5a5 solid;
+        width: 125px;
+        height: 25px;
+        text-align: center;
+        padding: 5px 8px;
+        transition: 150ms;
+        cursor: pointer;
+      }
+
+      .call-to-action-btn a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .call-to-action-btn:hover {
+        background: #D3D3D3;
+      }
+
+      .booking-time-table
+      {
+          
+      }
+      .booking-main
+      {
+          display: flex;
+          width: 90vw;
+          margin: auto;
+          gap: 75px;
+      }
+      
+      .flex
+      {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+      }
+      
+      
+      .our-services {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 90vw;
+        margin: 0 auto;
+        gap: 50px;
+        text-align: center;
+        padding: 25px 0 70px 0;
+      }
+
+      .our-services-paragraph {
+        text-align: center;
+        width: 80vw;
+        margin: 0 auto;
+        padding: 20px 0;
+        font-size: 20px;
+      }
+
+      .our-services-text {
+        text-align: center;
+        font-size: 32px;
+      }
+
+      .our-services img {
+        object-fit: cover;
+      }
+
+      .our-services-cards {
+        border: 1px #a5a5a5 solid;
+        border-radius: 5px;
+        height: 100%;
+      }
+
+      .our-services-cards img {
+        width: 100%;
+      }
+
+      .our-services-cards p {
+        padding: 8px 14px;
+      }
+
+      .our-services-cards h3 {
+        padding: 10px 0;
+      }
+        
+        #MainContent_AppCalendar
+        {
+            width: 340px;
+            border-radius: 12px;
+            margin: 12px 0;
+            padding: 8px;
+        }
+        
+        
+          .our-contacts {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        width: 90vw;
+        margin: 0 auto;
+        gap: 50px;
+        text-align: center;
+        padding: 25px 0 150px 0;
+      }
+      
+      .our-contacts-page
+      {
+          display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        width: 90vw;
+        margin: 0 auto;
+        gap: 50px;
+        text-align: center;
+        padding: 25px 0 50px 0;
+       }
+
+      .our-contacts-text {
+        text-align: center;
+      }
+
+      .our-contacts img {
+        object-fit: cover;
+      }
+
+      .our-contacts-cards {
+        border: 1px #a5a5a5 solid;
+        border-radius: 5px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .our-contacts-cards h3 {
+        padding: 10px 0;
+      }
+
+      footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 90vw;
+        margin: 0 auto;
+        padding: 10px 15px;
+        border-top: solid 1px #a5a5a5;
+      }
+
+      footer section {
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
+      .copyright-text {
+        grid-column: 1 / span 3;
+        text-align: center;
+        padding-top: 15px;
+      }
+      .col-span-1 {
+        grid-column: 1 / span 3;
+      }
+      .appointment-table table, .appointment-table th, .appointment-table td {
+        border: 1px solid black;
+      }
+      .appointment-table {
+        width: 90vw;
+        margin: 50px auto;
+        text-align: center;
+      }
+      .appointment-table .table-title-row {
+        font-size: 20px;
+        padding: 8px 0;
+      }
+      .appointment-table caption {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      .appointment-table td {
+        padding: 5px;
+      }
+      .appointment-table th {
+        padding: 6px;
+        background: #1D4ED8;
+      }
+      .appointment-times h2{
+        font-size: 24px;
+        text-align: center;
+      }
+      
+      .symptoms-input
+      {
+          display: flex;
+          flex-direction: column
+         
+      }
+      
+      .login-form-inputfield select
+      {
+          width: 120px;
+      }
+      
+      .form-label
+      {
+          color: #343434;
+          font-style: italic;  
+      }
+      
+      
+   .email-success
+   {
+       width: 60vw;
+       margin: 0 auto;
+       text-align: center;
+   }
+   
+   .hidden
+   {
+       display: none;
+       }
+       
+     .show
+     {
+         display: block;
+      }
+       
+      nav
+    {
+        position: relative; 
+        z-index: 50; 
+        justify-content: space-between; 
+        align-items: center; 
+        width: 100%; 
+        color: #ffffff; 
+        background-color: #1D4ED8; 
+        list-style: none;
+        text-decoration: none;
+
+    }
+    
+    .white-button
+    {
+        background: white;
+        color: Black;
+        }
+    
+    .title-cont
+    {
+        display: flex; 
+        margin-left: 1.25rem; 
+        justify-content: space-between; 
+        align-items: center; 
+        height: 100%; 
+        font-size: 1.25rem;
+        line-height: 1.75rem; 
+        font-weight: 600; 
+        }
+        
+     #ham
+     {
+         display: block; 
+        width: 4rem; 
+        height: 4rem; 
+
+         
+     }
+     
+     a
+     {
+        color: inherit; 
+      }
+      
+      .modal
+      {
+          width: 200px;
+          height: 150px;
+          position: absolute; 
+          
+      }
+    
+    nav ul
+    {
+     display: flex; 
+        position: absolute; 
+        left: 0; 
+        z-index: 50; 
+        padding: 0.75rem; 
+        flex-direction: column; 
+        justify-content: space-around; 
+        align-items: center; 
+        width: 100%; 
+        background-color: #1D4ED8; 
+        transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms; 
+        pointer-events: none; 
+        opacity: 0;   
+         list-style: none;
+        text-decoration: none;
+    }
+     
+     
+     ul li 
+     {
+         margin-top: 0.5rem; 
+        transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms; 
+
+
+     }
+      
+     
+        #nav
+          {
+              margin: 0 0;
+           }
+     
+ 
+  #nav.open {
+    opacity: 1;
+    pointer-events: all;
+    margin: 0 0;
+    height: 100vh;
+    width: 100vw;
+  }
+  .ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+  .line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #ffffff;
+    stroke-width: 4;
+    stroke-linecap: round;
+  }
+  .ham1 .top {
+    stroke-dasharray: 40 139;
+  }
+  .ham1 .bottom {
+    stroke-dasharray: 40 180;
+  }
+  .ham1.active .top {
+    stroke-dashoffset: -98px;
+  }
+  .ham1.active .bottom {
+    stroke-dashoffset: -138px;
+  }
+  
+  .unauth-cont
+  {
+    width: 50vw;
+    height: 80vh;
+    margin: auto;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;  
+  }
+  
+  .admin-users
+  {
+      width: 90vw;
+      margin: 0 auto;
+  }
+  
+ .admin-users table
+  {
+      width: 100%;
+      text-align: center;
+  }
+  
+  .block
+  {
+      display: block;
+   }
+   
+   .fullWidth
+   {
+       width: 90%;
+   }
+   
+  
+  .admin-users table th, .admin-users table th a
+  {
+      color: #1D4ED8;
+      text-decoration: none;
+  }
+  
+  .about-cont
+  {
+      width: 60vw;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+   .about-cont h1,  .about-cont h2,  .about-cont h3
+   {
+       text-align: center;
+   }
+   .about-cont img
+   {
+       margin: auto;
+       object-fit: cover;
+       border-radius: 8px;
+   }
+   
+   .about-cont p
+   {
+       text-align: justify;
+   }
+   
+   .login-cont
+   {
+       display: flex; 
+       align-items: center;
+       width: 100vw;
+       height: 100vh;
+   }
+   
+   .login-cont aside
+   {
+       width: 50vw;
+       height: 100vh;
+       background: #000;
+   }
+   
+   .login-cont aside img
+   {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       opacity: 0.6
+   }
+   
+   .login-cont main
+   {
+       width: 500px;
+       margin: auto;
+       padding: 80px;
+   }
+   
+   .login-cont h1
+   {
+       font-size: 36px;
+       color: #1D4ED8;
+   }
+   
+   .login-cont a, span
+   {
+       color: #1D4ED8;
+   }
+   
+   .login-inputform > section
+   {
+       display: flex;
+       flex-direction: column;
+       gap: 8px;    
+   }
+   
+   .danger
+   {
+       color: red;
+   }
+   
+   .backhome
+    {
+        z-index: 50;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        font-size: 18px;
+        color: White;
+   }
+   
+   .login-inputform input
+{
+    border-radius: 6px;
+     border: solid #444 1px;
+     padding: 8px 12px;
+}
+   
+
+.login-inputform input[type=submit]
+{
+    width: 100%;
+    background: #fff;
+    color: #000;
+    border-radius: 6px;
+     border: solid #444 1px;
+     padding: 8px 12px;
+     margin: 24px 0 0 0;
+     transition: 250ms;
+     cursor: pointer;
+}
+
+.login-inputform input[type=submit]:hover
+{
+    background: #343434;
+    color: #fff;
+}
+
+
+ @media only screen and (max-width: 768px)  
+    {
+       
+         body, html
+         {
+             overflow-x: hidden;
+             width: 100vw;
+         }
+        .our-services
+        {
+            display: flex;
+            flex-direction: column;   
+            width: 80%;
+            margin: auto;
+        }
+        .our-contacts
+        {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin: auto;
+        }
+        footer
+        {
+            display: block;
+        }
+        .hero
+        {
+            padding: 0 32px;
+            width: auto;
+            text-align: center;
+        }
+        .hero h1, h1, .main h2, .appointment-times h2
+        {
+            
+            font-size: 24px;
+        }
+        .appointment-times
+        {
+            width: 80%;
+            margin: auto;
+        }
+        .main p
+        {
+            font-size: 14px;
+        }
+        .appointment-table
+        {
+            width: auto;
+         }
+        .appointment-table th, .appointment-table td
+        {
+            font-size: 12px;
+        }
+         h3
+        {
+            font-size: 16px;
+            }
+            
+         .appointment-table td:last-child, .appointment-table th:last-child
+         {
+             display: none;
+          }
+          .about-cont
+          {
+              width: 80%;
+              margin: auto;
+          }
+     }
+    @media only screen and (min-width: 768px)  
+    {
+        nav
+        {
+            display: flex; 
+            padding: 1.25rem; 
+         }
+         
+         nav ul
+         {
+             position: relative; 
+            padding: 0; 
+            flex-direction: row; 
+            justify-content: right;
+            height: min-content; 
+            background-color: transparent; 
+            pointer-events: auto; 
+            opacity: 1; 
+             }
+             
+          ul li
+          {
+              margin-top: 0; 
+            margin-right: 1.25rem; 
+          }
+          
+          #ham
+          {
+              display: none;
+          }
+          
+          #nav
+          {
+              margin: 0 0;
+           }
+          
+  
+     }

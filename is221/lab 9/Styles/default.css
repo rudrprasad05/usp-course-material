@@ -1,0 +1,36 @@
+.header
+{	
+	height: 70px;
+	border: 1px solid #C0C0C0; 
+	background-color: #007A89;
+	margin-left: 20px;
+	margin-right: 20px;	
+}
+
+.maincontent
+{
+	position: absolute;
+	
+	left:190px;
+	min-height: 600px;
+	height:auto;
+	top:90px;
+	border: 1px solid #C0C0C0; 
+	background-color: #EEEEEE;
+	margin-bottom:20px;
+	margin-right: 20px;	
+	padding: 10px;
+}
+
+.menu
+{
+	margin-left: 20px;
+	position:absolute;
+	width:150px;
+	min-height: 400px;
+	height:auto;
+	top: 90px;
+	border: 1px solid #C0C0C0; 
+	background-color: #95ABD0
+}
+

@@ -1,0 +1,33 @@
+﻿<%@ Master Language="VB" CodeFile="University.master.vb" Inherits="MasterPages_University" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Styles/default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="header">
+        <img alt="" src="../images/usplogo.png" /> IS221 - Web Applications Development</div>
+    <div class="menu">
+        Menu<br />
+        <asp:HyperLink ID="HyperLink2" runat="server" 
+            NavigateUrl="https://www.usp.ac.fj/" Target="_blank">Home</asp:HyperLink><br />
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/aboutme.aspx">About me</asp:HyperLink><br />
+        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/StudentList.aspx">Students</asp:HyperLink><br />
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Register.aspx">Register</asp:HyperLink><br />
+        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/IS221.aspx">IS221</asp:HyperLink><br />
+        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/MasterPages/University.master">Student List</asp:HyperLink>
+    </div>
+    <div class="maincontent">
+        <asp:ContentPlaceHolder id="contentArea" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
