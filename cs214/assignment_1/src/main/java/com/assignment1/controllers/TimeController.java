@@ -1,4 +1,4 @@
-package org.example;
+package com.assignment1.controllers;
 
 /*
  * @author
@@ -15,8 +15,6 @@ public class TimeController {
 
     public static long end(long startTime, String methodName){
         long endTime = System.nanoTime();
-        long elapsedTimeInMilli = (endTime - startTime) / 1_000_000;
-        System.out.println(methodName + ": " + elapsedTimeInMilli + " milliseconds");
-        return elapsedTimeInMilli;
+        return (endTime - startTime) / 1_000_000;
     }
 }

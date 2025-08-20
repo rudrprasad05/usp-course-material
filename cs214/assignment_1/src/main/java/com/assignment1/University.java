@@ -1,4 +1,4 @@
-package org.example;
+package com.assignment1;
 
 /*
  * @author
@@ -8,9 +8,7 @@ package org.example;
  *
  */
 
-
 import java.util.Comparator;
-import java.util.Objects;
 
 public class University implements Comparable<University> {
     private Integer rank;
@@ -26,6 +24,7 @@ public class University implements Comparable<University> {
     private Double citationScore;
     private Double industryIncomeScore;
     private Double internationalOutlookScore;
+    private static int comparisonCounter;
 
     public University(){}
     public University(Integer rank, String name, String location, Integer numberOfStudents, Double ratioOfStudentToStaff, String internationalStudent, String maleToFemaleRatio, String overAllScore, String teachingScore, Double researchScore, Double citationScore, Double industryIncomeScore, Double internationalOutlookScore) {
@@ -42,6 +41,7 @@ public class University implements Comparable<University> {
         this.citationScore = citationScore;
         this.industryIncomeScore = industryIncomeScore;
         this.internationalOutlookScore = internationalOutlookScore;
+        comparisonCounter = 0;
     }
 
     @Override
@@ -101,25 +101,28 @@ public class University implements Comparable<University> {
         return internationalOutlookScore;
     }
 
+    public static int getComparisonCount() {
+        return comparisonCounter;
+    }
+
+    public static void resetComparisonCount() {
+        comparisonCounter = 0;
+    }
+
     @Override
     public int compareTo(University o) {
-        return 0;
+        comparisonCounter++;
+        return this.rank.compareTo(o.rank);
     }
+
     public static Comparator<University> getRankComparator() {
+        comparisonCounter++;
         return new Comparator<University>() {
             @Override
             public int compare(University u1, University u2) {
-                if (Objects.equals(u1.getRank(), u2.getRank())) {
-                    return 0;
-                } else if (u1.getRank() > u2.getRank()) {
-                    return 1;
-                } else {
-                    return -1;
-                }
+                comparisonCounter++;
+                return u1.rank.compareTo(u2.rank);
             }
         };
     }
-
-
-
 }
