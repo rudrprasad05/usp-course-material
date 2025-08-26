@@ -1,0 +1,4 @@
+ERRONEOUS#>mvn clean
+ERRONEOUS#>mvn test
+VAR#>mvn test
+VAR#>mvn verify
