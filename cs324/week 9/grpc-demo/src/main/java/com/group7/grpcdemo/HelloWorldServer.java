@@ -2,6 +2,8 @@ package com.group7.grpcdemo;
 
 import com.group7.grpcdemo.HelloWorldProto.HelloReply;
 import com.group7.grpcdemo.HelloWorldProto.HelloRequest;
+import com.group7.grpcdemo.HelloWorldProto.AddReply;
+import com.group7.grpcdemo.HelloWorldProto.AddRequest;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
@@ -16,7 +18,14 @@ public class HelloWorldServer {
     static class GreeterImpl extends GreeterGrpc.GreeterImplBase {
         @Override
         public void sayHello(HelloRequest req, StreamObserver<HelloReply> responseObserver) {
-            HelloReply reply = HelloReply.newBuilder().setMessage("Hello " + req.getName()).build();
+            HelloReply reply = HelloReply.newBuilder().setMessage("Hello " + req.getName() + " from " + req.getCountry()).build();
+            responseObserver.onNext(reply);
+            responseObserver.onCompleted();
+        }
+
+        @Override
+        public void add(AddRequest req, StreamObserver<AddReply> responseObserver) {
+            AddReply reply = AddReply.newBuilder().setResult(req.getX() + req.getY()).build();
             responseObserver.onNext(reply);
             responseObserver.onCompleted();
         }

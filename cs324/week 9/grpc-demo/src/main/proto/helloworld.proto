@@ -3,10 +3,21 @@ option java_package = "com.group7.grpcdemo";
 option java_outer_classname = "HelloWorldProto";
 service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc Add (AddRequest) returns (AddReply);
 }
 message HelloRequest {
   string name = 1;
+  string country = 2;
 }
 message HelloReply {
   string message = 1;
+}
+
+message AddRequest{
+  int32 x = 1;
+  int32 y = 2;
+}
+
+message AddReply{
+  int32 result = 1;
 }
