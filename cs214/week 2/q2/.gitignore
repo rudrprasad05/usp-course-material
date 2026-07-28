@@ -1,0 +1,13 @@
+# MATLAB autosave and generated files
+*.asv
+*.m~
+*.mlx.autosave
+
+# MATLAB/Simulink build outputs
+slprj/
+codegen/
+*.mex*
+
+# Local output folders
+out/
+figures/
