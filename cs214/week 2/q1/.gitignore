@@ -1,0 +1,15 @@
+# Java build outputs
+*.class
+out/
+build/
+dist/
+target/
+
+# IDE and local metadata
+.idea/
+.vscode/
+nbproject/private/
+
+# Logs and temporary files
+*.log
+*.tmp
