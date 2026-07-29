@@ -2,6 +2,11 @@
 % Calculate the total sale for five products and six customers.
 
 unitPrices = [2.50, 1.00, 33.90, 7.00, 200.00];
+// [2.5;
+// 1.0;
+// 33.9;
+// ...
+// ]
 
 itemsPurchased = [
     3 0 0 1 1;

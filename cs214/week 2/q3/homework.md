@@ -45,7 +45,9 @@ public class DivisionExample {
             System.out.println(result);
         } catch (ArithmeticException e) {
             System.out.println("Cannot divide by zero.");
-        }
+        } catch (Error e){
+            System.out.println("Cannot divide by zero.");
+        } catch ....
     }
 }
 ```
